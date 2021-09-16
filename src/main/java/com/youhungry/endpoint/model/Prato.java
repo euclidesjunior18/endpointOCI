@@ -20,11 +20,11 @@ public class Prato {
     private String nome;
     @Column(length = 90, nullable = false)
     private String descricao;
-    @OneToOne
-    @JoinColumn(name = "idrestaurante",nullable=false)
+    @ManyToOne
+    @JoinColumn(name = "idrestaurante")
     private Restaurante restaurante;
-    @Column @Temporal(TemporalType.TIME) // hh:mm:ss
-    private Date tempoParaPreparo;
+    //@Column @Temporal(TemporalType.TIME) // hh:mm:ss
+    private String tempoParaPreparo;
     @Column
     private String acompanhamento;
     @Column
